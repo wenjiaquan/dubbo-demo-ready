@@ -23,9 +23,9 @@ public class ArticleServiceImpl implements ArticleService {
 	private ArticleDao articleMapper;
 	
 	@Override
-	public List<Article> list(String condition) {
+	public List<Article> list(String condition,String created1,String created2) {
 		// TODO Auto-generated method stub
-		return articleMapper.list(condition);
+		return articleMapper.list(condition,created1,created2);
 	}
 
 }

@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="list">
+<form action="list" method="post">
    请按照选项排序：<select name="condition">
                     <option value="">请选择</option>
                     <c:if test="${condition=='created' }">
@@ -31,7 +31,11 @@
                     <c:if test="${condition!='commentCnt' }">
                     <option value="commentCnt">评论数量</option>
                     </c:if>
-             </select><input type="submit" value="确定">
+             </select>
+             开始时间:<input type="date" name="created1" value="${created1}">
+             结束时间:<input type="date" name="created2" value="${created2}">
+             <input type="submit" value="确定">
+</form>
              <table>
                 <tr>
                    <td>id</td>
@@ -52,6 +56,5 @@
                   </tr>
                 </c:forEach>
              </table>
-</form>
 </body>
 </html>

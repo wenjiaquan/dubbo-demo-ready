@@ -14,6 +14,6 @@ import com.wjq.pojo.Article;
 */
 public interface ArticleService {
 
-	List<Article> list(String condition);
+	List<Article> list(String condition,String created1,String created2);
 
 }

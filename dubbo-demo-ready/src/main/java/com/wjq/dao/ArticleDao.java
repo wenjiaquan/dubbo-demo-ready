@@ -16,6 +16,6 @@ import com.wjq.pojo.Article;
 */
 public interface ArticleDao {
 
-	List<Article> list(@Param("condition") String condition);
+	List<Article> list(@Param("condition") String condition,@Param("created1") String created1,@Param("created2") String created2);
 
 }

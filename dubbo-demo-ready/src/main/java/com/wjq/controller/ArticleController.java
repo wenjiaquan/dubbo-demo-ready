@@ -1,5 +1,7 @@
 package com.wjq.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.wenjiaquan.utils.DateUtil;
 import com.wjq.pojo.Article;
 import com.wjq.service.ArticleService;
 
@@ -24,12 +27,12 @@ public class ArticleController {
 	private ArticleService articleService;
 	
 	@RequestMapping("list")
-	public String list(Model model,String condition) {
-		System.out.println("-------------------------------------");
-		List<Article> articleList = articleService.list(condition);
-		
+	public String list(Model model,String condition,String created1,String created2) {
+		List<Article> articleList = articleService.list(condition,created1,created2);
 		model.addAttribute("condition", condition);
 		model.addAttribute("articleList", articleList);
+		model.addAttribute("created1",created1);
+		model.addAttribute("created2",created2);
 		return "list";
 	}
 }

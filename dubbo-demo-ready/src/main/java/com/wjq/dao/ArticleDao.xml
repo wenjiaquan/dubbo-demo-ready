@@ -6,10 +6,13 @@
 		select a.id,a.title,a.created,u.username,a.commentCnt,a.status 
 		from cms_article a LEFT JOIN cms_user u on a.user_id =u.id
 	 
+	 	 <if test="created1!=null and created1!='' and created2!=null and created2!=''">
+	 	 where created between #{created1} and #{created2}
+	  	</if>
 	       <if test="condition!=null and condition!=''">
 	         order by ${condition} desc
 	       </if>
-	  
+	 
 	
 	
 	</select>

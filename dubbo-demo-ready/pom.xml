@@ -37,6 +37,11 @@
 	<!-- jar依赖 -->
 	<dependencies>
 	<dependency>
+	<groupId>com.wenjiaquan.common.utils</groupId>
+  <artifactId>common-utils</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
 			<version>5.6.8</version>
